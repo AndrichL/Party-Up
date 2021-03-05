@@ -26,7 +26,7 @@ public class playerScript : MonoBehaviour
         move = move * Time.deltaTime;
         transform.position += move;
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
             Jump();
         }
