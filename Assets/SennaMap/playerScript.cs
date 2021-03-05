@@ -8,6 +8,7 @@ public class playerScript : MonoBehaviour
     [SerializeField] Transform jumpCheckPoint; // The point where the ray gets cast from to check if the player is grounded
     public Rigidbody rigidbody; // Public so it can be accessed by "Shooting Script"
 
+    private Vector3 InputVector;
 
     private void Start()
     {
@@ -20,13 +21,19 @@ public class playerScript : MonoBehaviour
 
     private void Movement()
     {
-        float x = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        //InputVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
+        //rigidbody.velocity = InputVector * moveSpeed;
 
-        Vector3 move = new Vector3(x, 0f, 0f);
-        move = move * Time.deltaTime;
-        transform.position += move;
+        float x = Input.GetAxisRaw("Horizontal");
+        rigidbody.velocity += new Vector3(x, 0, 0) * moveSpeed * Time.fixedDeltaTime;
+        rigidbody.velocity.Normalize();
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+        if (x == 0)
+        {
+            rigidbody.velocity = new Vector3(0, rigidbody.velocity.y, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
         }

@@ -32,10 +32,6 @@ public class ShootingScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             player.rigidbody.AddForce(-direction * player.Knockback, ForceMode.Impulse);
-
-            print(angle);
-            print("knockback = " + player.Knockback);
-            print("object = " + player.rigidbody);
         }
     }
 
