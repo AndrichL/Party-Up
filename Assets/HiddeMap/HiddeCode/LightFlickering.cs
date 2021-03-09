@@ -18,6 +18,8 @@ public class LightFlickering : MonoBehaviour
     [Header("ColourSetter")]
     [SerializeField] private string[] colourHexes;
     [SerializeField] float changeInterval;
+    [SerializeField] private Color currentColour;
+
 
     // Continuous average calculation via FIFO queue
     // Saves us iterating every time we update, we just change by the delta
@@ -38,14 +40,13 @@ public class LightFlickering : MonoBehaviour
 
     void Start()
     {
-
         smoothQueue = new Queue<float>(smoothing);
         // External or internal light?
         if (light == null)
         {
             light = GetComponent<Light>();
         }
-
+        
         StartCoroutine(LightColourChange());
     }
 
@@ -62,15 +63,26 @@ public class LightFlickering : MonoBehaviour
 
         // Generate random new item, calculate new average
         float newVal = Random.Range(minIntensity, maxIntensity);
-        smoothQueue.Enqueue(newVal);
+        smoothQueue.Enqueue(newVal);    
         lastSum += newVal;
 
         // Calculate new smoothed average
         light.intensity = lastSum / (float)smoothQueue.Count;
     }
 
-    IEnumerator(LightColourChange)
+    IEnumerator LightColourChange()
     {
-        return WaitForSeconds(changeInterval);
+        while (!GameManager.instance.gameIsPaused)
+        {
+            int lightUsed;
+
+            lightUsed = Random.Range(0, colourHexes.Length - 1);
+
+            ColorUtility.TryParseHtmlString("#" + colourHexes[lightUsed], out currentColour);
+            
+            light.color = currentColour;
+            
+            yield return new WaitForSeconds(changeInterval);
+        }
     }
 }

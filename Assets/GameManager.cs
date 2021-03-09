@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
 
     [Header("GameState")]
-    public bool gameIsPaused;   
+    public bool gameIsPaused = false;   
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (instance == null)
             instance = this;

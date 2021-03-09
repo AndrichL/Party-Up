@@ -25,7 +25,7 @@ public class DiscoBall : MonoBehaviour
 
     IEnumerator ColourChange()
     {
-        while (true)
+        while (!GameManager.instance.gameIsPaused)
         {
             
             int materialUsed;
