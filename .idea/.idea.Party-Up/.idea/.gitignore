@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/modules.xml
+/contentModel.xml
+/.idea.Party-Up.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\School\glu\Jaar 2\Party-Up (party game)\Party-Up\.idea\.idea.Party-Up\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
