@@ -27,13 +27,13 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
 
     public void Update()
     {
-        if(IsConecting == true)
-        {
+        //if (IsConecting == true)
+        //{
 
-            WaitIngStatusText.text = "Waiting For Opponents To join. " + PhotonNetwork.CurrentRoom.PlayerCount + "/4 Player In Game";
+        //    WaitIngStatusText.text = "Waiting For Opponents To join. " + PhotonNetwork.CurrentRoom.PlayerCount + "/4 Player In Game";
 
 
-        }
+        //}
     }
 
     public void FindOpponent()
@@ -48,10 +48,12 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
         if(PhotonNetwork.IsConnected)
         {
             PhotonNetwork.JoinRandomRoom();
+            WaitIngStatusText.text = "Conected.....:}";
         }
         else
         {
             PhotonNetwork.GameVersion = GameVersion;
+            WaitIngStatusText.text = "Checking version and connecting.....:}";
             PhotonNetwork.ConnectUsingSettings();
         }
 
@@ -60,8 +62,8 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connectet To Master");
-
-        if(IsConecting)
+        WaitIngStatusText.text = "connecting.....:}";
+        if (IsConecting)
         {
             PhotonNetwork.JoinRandomRoom();
         }
@@ -72,7 +74,7 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
     public override void OnDisconnected(DisconnectCause cause)
     {
         WaitstatusPanel.SetActive(false);
-        FindOpponentPannel.SetActive(true);
+     
 
         Debug.Log($"Player Disconect becaus of: " + cause);
     }
@@ -93,7 +95,7 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
 
         if (PlayerCount != MaxPlayersPerRoom)
         {
-            WaitIngStatusText.text = "Waiting For Opponents To join. " + PhotonNetwork.CurrentRoom.PlayerCount + "/4 Player In Game";
+            WaitIngStatusText.text = "Waiting For Opponents To join. ";
             Debug.Log("Client Is waiting For Opponents Clients to connect");
         }
         else
