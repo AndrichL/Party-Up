@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/BryanMap/Scripts/MenuNameInput.unity
+    guid: 4fc00e0efb35ae44db6431304c406cd5
+  - enabled: 1
+    path: Assets/BryanMap/Scripts/MainGameTesting.unity
+    guid: 6f98bafa25aae724a85fc4072547fdee
   m_configObjects: {}
