@@ -11,13 +11,26 @@ using UnityEngine.UI;
 [RequireComponent(typeof(CharacterController))]
 public class BasicMovementBRyanTEst : MonoBehaviourPun
 {
+  
+
     private CharacterController CC = null;
     [SerializeField] private float Speed;
+    
+    [PunRPC]
+    public void SetPos(float X, float Y, float Z)
+    {
+        transform.position = new Vector3(X, Y, Z);
+    }
 
 
     public void Start()
     {
         CC = GetComponent<CharacterController>();
+
+
+
+      
+
     }
 
 
@@ -42,7 +55,7 @@ public class BasicMovementBRyanTEst : MonoBehaviourPun
 
 
 
-        CC.SimpleMove(movement * Speed * Time.deltaTime);
+        CC.SimpleMove(movement * Speed);
 
 
     }

@@ -8,7 +8,7 @@ using TMPro;
 using UnityEngine.UI;
 public class PlayerSpawnerPhoton : MonoBehaviour
 {
-    [SerializeField] private GameObject PlayerModel1;
+    [SerializeField] private GameObject PlayerModel1 = null;
     public int MaxPlayersInScene;
     
    public void Start()
