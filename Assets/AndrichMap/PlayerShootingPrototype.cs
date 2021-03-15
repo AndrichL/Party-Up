@@ -6,7 +6,7 @@ using Photon.Realtime;
 
 namespace Andrich
 {
-    public class PlayerShootingPrototype : MonoBehaviourPun
+    public class PlayerShootingPrototype : MonoBehaviour
     {
         [Header("Components")]
         [SerializeField] private Camera m_Camera;
@@ -110,18 +110,13 @@ namespace Andrich
 
         private void Update()
         {
-            if (photonView.IsMine)
-            {
+           
                 MyUpdate();
-            }
         }
 
         private void FixedUpdate()
         {
-            if (photonView.IsMine)
-            {
                 MyFixedUpdate();
-            }
         }
     }
 }

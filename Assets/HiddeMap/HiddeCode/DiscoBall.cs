@@ -9,6 +9,7 @@ public class DiscoBall : MonoBehaviour
     [SerializeField] Material[] materials;
     [SerializeField] MeshRenderer mesh;
     [SerializeField] float rotationSpeed = 2f;
+    [SerializeField] bool rotation = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class DiscoBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!rotation) return;
         gameObject.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
 
     }

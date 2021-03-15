@@ -7,7 +7,7 @@ namespace Andrich
 { 
 
     [RequireComponent(typeof(Rigidbody))]
-    public class PlayerControllerPrototype : MonoBehaviourPun
+    public class PlayerControllerPrototype : MonoBehaviour
     {
 
         [Header("Components")]
@@ -98,18 +98,14 @@ namespace Andrich
 
         private void Update()
         {
-            if(photonView.IsMine)
-            {
+           
                 MyUpdate();
-            }
+         
         }
 
         private void FixedUpdate()
         {
-            if(photonView.IsMine)
-            {
-                MyFixedUpdate();
-            }
+              MyFixedUpdate();
         }
     }
 }
