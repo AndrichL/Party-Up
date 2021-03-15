@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
+  m_IndirectSpecularColor: {r: 0.2561884, g: 0.31743145, b: 0.42013597, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: d372d48050a86c349a934b6541adbd63, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 3e559401846c547418b6ae5317cd0e5e, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 9da754b4a9adb894097fae4a294ed453, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -153,7 +153,7 @@ Transform:
   - {fileID: 57948466}
   - {fileID: 1078954630}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39892645
 GameObject:
@@ -311,7 +311,7 @@ Transform:
   - {fileID: 985554999}
   - {fileID: 138076675}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &57948465
 GameObject:
@@ -930,7 +930,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -938,14 +937,14 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3370.9258
+  m_Intensity: 0.5445507
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
-  m_LightUnit: 0
+  m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -970,18 +969,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -1017,11 +1008,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -1049,26 +1036,9 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 0
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 381754603}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!108 &381754603 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 6767184469777165204, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
-  m_PrefabInstance: {fileID: 6767184469775126879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &469120176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,12 +1489,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: 01bdbed92bd64504ab2a8f497ba92127, type: 2}
   m_StaticLightingSkyUniqueID: 1
-  m_LastComputedHash: 0
-  m_NeedUpdateStaticLightingSky: 0
-  m_SkySettings: {fileID: 0}
-  m_SkySettingsFromProfile: {fileID: 0}
-  m_VolumeSkyList:
-  - {fileID: 448115243408767295, guid: 01bdbed92bd64504ab2a8f497ba92127, type: 2}
 --- !u!4 &610661212
 Transform:
   m_ObjectHideFlags: 1
@@ -1653,7 +1617,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -1661,14 +1624,14 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3370.9258
+  m_Intensity: 0.5445507
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
-  m_LightUnit: 0
+  m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -1693,18 +1656,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -1740,11 +1695,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -1772,26 +1723,9 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 0
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 699963054}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!108 &699963054 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 6767184470151356965, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
-  m_PrefabInstance: {fileID: 6767184469775126879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &729931584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,7 +1939,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 26776.326
+  m_Intensity: 14
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2048,7 +1982,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 5944
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: -1.0470791e-12, z: 4.5905e-41, w: 6.3426476}
   m_UseBoundingSphereOverride: 0
@@ -2082,7 +2016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -2090,7 +2023,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 26776.326
+  m_Intensity: 14
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -2122,18 +2055,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -2169,11 +2094,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -2201,18 +2122,6 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 1
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 000000000100000002000000030000000000000000000000
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 818065194}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
@@ -2234,7 +2143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -2242,14 +2150,14 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3370.9258
+  m_Intensity: 0.5445507
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
-  m_LightUnit: 0
+  m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -2274,18 +2182,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -2321,11 +2221,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -2353,26 +2249,9 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 0
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 839658071}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!108 &839658071 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 6767184470031569558, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
-  m_PrefabInstance: {fileID: 6767184469775126879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &923760446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2613,7 +2492,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -2621,14 +2499,14 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3370.9258
+  m_Intensity: 0.5445507
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
-  m_LightUnit: 0
+  m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -2653,18 +2531,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -2700,11 +2570,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -2732,26 +2598,9 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 0
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 1024420871}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!108 &1024420871 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 6767184469529782585, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
-  m_PrefabInstance: {fileID: 6767184469775126879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1078954629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,7 +3225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a91255f453536364f88b0da702025fc1, type: 2}
+  - {fileID: 2100000, guid: a0a07c7bdf4137d4b825c23de6d61077, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3534,7 +3383,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -3542,14 +3390,14 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3370.9258
+  m_Intensity: 0.5445507
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
-  m_LightUnit: 0
+  m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -3574,18 +3422,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -3621,11 +3461,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -3653,26 +3489,9 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 0
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 1498551317}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!108 &1498551317 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 6767184469906711027, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
-  m_PrefabInstance: {fileID: 6767184469775126879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1504879343
 GameObject:
   m_ObjectHideFlags: 0
@@ -3912,15 +3731,11 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
-  m_Camera: {fileID: 1517600736}
   clearColorMode: 0
-  backgroundColorHDR:
-    r: 0.025
-    g: 0.07
-    b: 0.19
-    a: 0
+  backgroundColorHDR: {r: 0.025, g: 0.07, b: 0.19, a: 0}
   clearDepth: 1
   volumeLayerMask:
+    serializedVersion: 2
     m_Bits: 1
   volumeAnchorOverride: {fileID: 0}
   antialiasing: 0
@@ -3948,12 +3763,14 @@ MonoBehaviour:
   customRenderingSettings: 0
   invertFaceCulling: 0
   probeLayerMask:
+    serializedVersion: 2
     m_Bits: 4294967295
   hasPersistentHistory: 0
   exposureTarget: {fileID: 0}
-  probeCustomFixedExposure: 1
   m_RenderingPathCustomFrameSettings:
-    bitDatas: {}
+    bitDatas:
+      data1: 72198262773251917
+      data2: 13763000468760363032
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
@@ -3963,14 +3780,12 @@ MonoBehaviour:
     sssQualityMode: 0
     sssQualityLevel: 0
     sssCustomSampleBudget: 20
-    sssResolvedSampleBudget: 0
     materialQuality: 0
   renderingPathCustomFrameSettingsOverrideMask:
-    mask: {}
+    mask:
+      data1: 0
+      data2: 0
   defaultFrameSettings: 0
-  m_IsDebugRegistered: 0
-  m_CameraRegisterName: Main Camera
-  <isEditorCameraPreview>k__BackingField: 0
 --- !u!1001 &1546380930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4154,7 +3969,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -4162,14 +3976,14 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3370.9258
+  m_Intensity: 0.5445507
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
-  m_LightUnit: 0
+  m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -4194,18 +4008,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -4241,11 +4047,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -4273,26 +4075,9 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 0
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 1674112844}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!108 &1674112844 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 6767184469384356386, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
-  m_PrefabInstance: {fileID: 6767184469775126879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687254551
 GameObject:
   m_ObjectHideFlags: 0
@@ -4327,7 +4112,7 @@ Transform:
   - {fileID: 560010204}
   - {fileID: 1841663827}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1720665797
 PrefabInstance:
@@ -4569,7 +4354,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -4577,14 +4361,14 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3370.9258
+  m_Intensity: 0.5445507
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
-  m_LightUnit: 0
+  m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -4609,18 +4393,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -4656,11 +4432,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -4688,26 +4460,9 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 0
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 1763412499}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!108 &1763412499 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 6767184470500763535, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
-  m_PrefabInstance: {fileID: 6767184469775126879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1777005184 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6767184468783793977, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
@@ -4726,7 +4481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -4734,14 +4488,14 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3370.9258
+  m_Intensity: 0.5445507
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
-  m_LightUnit: 0
+  m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -4766,18 +4520,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -4813,11 +4559,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -4845,26 +4587,9 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 0
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 1777005188}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!108 &1777005188 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 6767184468783793973, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
-  m_PrefabInstance: {fileID: 6767184469775126879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1801152718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5635,7 +5360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 11
-  m_LightLayers: 1
   m_ObsoleteShadowResolutionTier: 1
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
@@ -5643,14 +5367,14 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 3370.9258
+  m_Intensity: 0.40276456
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
-  m_LightUnit: 0
+  m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -5675,18 +5399,10 @@ MonoBehaviour:
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
   m_FlareSize: 2
-  m_FlareTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
@@ -5722,11 +5438,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_RayTracedContactShadow: 0
-  m_ShadowTint:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
@@ -5754,26 +5466,9 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  m_WillRenderShadowMap: 0
-  m_WillRenderScreenSpaceShadow: 0
-  m_WillRenderRayTracedShadow: 0
-  m_ShadowRequestIndices: 
-  m_CachedViewPos: {x: 0, y: 0, z: 0}
-  m_Light: {fileID: 1925105421}
-  m_ChildEmissiveMeshViewer: {fileID: 0}
-  m_EmissiveMeshFilter: {fileID: 0}
-  <emissiveMeshRenderer>k__BackingField: {fileID: 0}
-  m_NeedsPrefabInstanceCheck: 0
-  needRefreshPrefabInstanceEmissiveMeshes: 0
-  needRefreshEmissiveMeshesFromTimeLineUpdate: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!108 &1925105421 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 6767184470013873275, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
-  m_PrefabInstance: {fileID: 6767184469775126879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2021721525
 GameObject:
   m_ObjectHideFlags: 0
@@ -5977,7 +5672,7 @@ Transform:
   - {fileID: 8153586662529564866}
   - {fileID: 5471650356779886904}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2999738457784531
 MeshFilter:
@@ -8332,20 +8027,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3507352998988463080, guid: 8bc547f2300214edfa282f75ef0e4d86, type: 3}
---- !u!4 &219343514007574413
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8256724771745669632}
-  m_LocalRotation: {x: 0.8998655, y: -0.06895135, z: 0.4020893, w: 0.15431133}
-  m_LocalPosition: {x: -27.056103, y: 11.141618, z: 22.120834}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &220041429199275392
 GameObject:
   m_ObjectHideFlags: 0
@@ -13008,7 +12689,7 @@ Transform:
   - {fileID: 595298904307174686}
   - {fileID: 8896875266345100911}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &691291159292916314
 GameObject:
@@ -33032,7 +32713,7 @@ Transform:
   - {fileID: 1749258132547653104}
   - {fileID: 2621598211015063981}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2749232272929699019
 MeshRenderer:
@@ -40683,7 +40364,7 @@ Transform:
   - {fileID: 213498927744991209}
   - {fileID: 5433254446962436563}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3484751623473871652
 Transform:
@@ -50609,7 +50290,7 @@ Transform:
   - {fileID: 533482306}
   - {fileID: 729931585}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4523498770503153803
 MeshFilter:
@@ -59375,68 +59056,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3319778552995529591, guid: 8bc547f2300214edfa282f75ef0e4d86, type: 3}
---- !u!108 &5422050566094088754
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8256724771745669632}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 1, g: 0.8588236, b: 0.8588236, a: 1}
-  m_Intensity: 0.5
-  m_Range: 5.1308
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &5423302230094598219
 GameObject:
   m_ObjectHideFlags: 0
@@ -72378,7 +71997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6767184468783793973, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
-      value: 268.24976
+      value: 0.5445507
       objectReference: {fileID: 0}
     - target: {fileID: 6767184468783793973, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.x
@@ -72396,9 +72015,13 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184468783793977, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6767184469384356386, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
-      value: 268.24976
+      value: 0.5445507
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469384356386, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.x
@@ -72415,10 +72038,14 @@ PrefabInstance:
     - target: {fileID: 6767184469384356386, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_LightShadowCasterMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184469384356390, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469529782585, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
-      value: 268.24976
+      value: 0.5445507
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469529782585, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.x
@@ -72436,9 +72063,13 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184469529782589, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6767184469777165204, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
-      value: 268.24976
+      value: 0.5445507
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469777165204, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.x
@@ -72455,10 +72086,14 @@ PrefabInstance:
     - target: {fileID: 6767184469777165204, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_LightShadowCasterMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184469777165208, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469906711027, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
-      value: 268.24976
+      value: 0.5445507
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469906711027, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.x
@@ -72476,9 +72111,13 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184469906711029, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6767184470013873275, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
-      value: 268.24976
+      value: 0.40276456
       objectReference: {fileID: 0}
     - target: {fileID: 6767184470013873275, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.x
@@ -72496,9 +72135,13 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184470013873279, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6767184470031569558, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
-      value: 268.24976
+      value: 0.5445507
       objectReference: {fileID: 0}
     - target: {fileID: 6767184470031569558, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.x
@@ -72516,9 +72159,13 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184470031569560, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6767184470151356965, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
-      value: 268.24976
+      value: 0.5445507
       objectReference: {fileID: 0}
     - target: {fileID: 6767184470151356965, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.x
@@ -72536,9 +72183,13 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184470151356969, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6767184470500763535, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
-      value: 268.24976
+      value: 0.5445507
       objectReference: {fileID: 0}
     - target: {fileID: 6767184470500763535, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.x
@@ -72555,6 +72206,10 @@ PrefabInstance:
     - target: {fileID: 6767184470500763535, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_LightShadowCasterMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184470500763539, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
@@ -72654,7 +72309,7 @@ Transform:
   - {fileID: 6358142443712049783}
   - {fileID: 51773208709746128}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6778915459306184474
 MeshFilter:
@@ -76857,7 +76512,7 @@ Transform:
   - {fileID: 8641401406824618364}
   - {fileID: 6273825838012339116}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7217174636173835654
 Transform:
@@ -81048,7 +80703,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 986954797853884942}
-  - {fileID: 219343514007574413}
   - {fileID: 1201736980067116}
   - {fileID: 6778218797614489302}
   - {fileID: 7216649416701637319}
@@ -82388,7 +82042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7785925406839938313
 Transform:
@@ -86797,23 +86451,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &8256724771745669632
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 219343514007574413}
-  - component: {fileID: 5422050566094088754}
-  m_Layer: 0
-  m_Name: Fspot002
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!33 &8257031231141238972
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -86868,7 +86505,7 @@ Transform:
   - {fileID: 8696893711292235237}
   - {fileID: 8961305405856884150}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8268977271047557419
 MeshFilter:
@@ -95523,7 +95160,7 @@ Transform:
   m_Children:
   - {fileID: 5123526204231925420}
   m_Father: {fileID: 7626426976039240506}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9164589232554615976
 GameObject:
