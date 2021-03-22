@@ -13,10 +13,14 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject WaitstatusPanel = null;
     [SerializeField] private TextMeshProUGUI WaitIngStatusText = null;
 
+    int positionNumber;
+    int newPos;
+    int numberPlayers;
+
 
     private bool IsConecting = false;
     private const string GameVersion = "0.0.0.1";
-    private const int MaxPlayersPerRoom = 4;
+    private const int MaxPlayersPerRoom = 3;
 
 
     private void Awake()
@@ -27,13 +31,11 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
 
     public void Update()
     {
-        //if (IsConecting == true)
-        //{
+        if(IsConecting)
+        {
+          
+        }
 
-        //    WaitIngStatusText.text = "Waiting For Opponents To join. " + PhotonNetwork.CurrentRoom.PlayerCount + "/4 Player In Game";
-
-
-        //}
     }
 
     public void FindOpponent()
