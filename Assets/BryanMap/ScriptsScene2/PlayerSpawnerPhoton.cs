@@ -13,12 +13,8 @@ public class PlayerSpawnerPhoton : MonoBehaviour
     
    public void Start()
     {
-        if(MaxPlayersInScene <= 4)
-        {
             PhotonNetwork.Instantiate(PlayerModel1.name, Vector3.zero, Quaternion.identity);
-            MaxPlayersInScene++;
-        }
-        
+             
     }
 
    
