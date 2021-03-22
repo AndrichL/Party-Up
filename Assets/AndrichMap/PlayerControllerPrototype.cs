@@ -28,6 +28,8 @@ namespace Andrich
         [SerializeField] private Vector3 m_BottomCollisionSize;
         private bool m_OnGround;
 
+        [SerializeField] private ParticleSystem VfxObject;
+
         private void Start()
         {
             m_Rigidbody = GetComponent<Rigidbody>();
@@ -48,6 +50,7 @@ namespace Andrich
 
             if (m_OnGround)
             {
+                VfxObject.Play();
                 print("Onground");
                 if(m_JumpInput)
                 {

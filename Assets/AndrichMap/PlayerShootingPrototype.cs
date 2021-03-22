@@ -18,7 +18,7 @@ namespace Andrich
         [SerializeField] private float m_ShootRange = 10f;
         [SerializeField] private float m_RecoilForce = 100;
         private Vector3 m_MousePosition;
-        private Vector2 m_AimDirection;
+        private Vector3 m_AimDirection;
         private bool m_AllowNextShot = true;
         private IEnumerator m_ShootTimer;
         private float m_RecoilStunTime = 0.3f;
@@ -28,6 +28,8 @@ namespace Andrich
         [SerializeField] private float m_FirePointOffset = 2f;
         [SerializeField] private float m_KnockbackForce = 100;
         private float m_KnockbackStunTime = 0.5f;
+
+        [SerializeField] private ParticleSystem VfxObject;
 
         private void Start()
         {
@@ -47,7 +49,7 @@ namespace Andrich
                 if (m_AllowNextShot)
                 {
                     Shoot();
-
+                    VfxObject.Play();
                     m_ShootTimer = ShootTimer(m_ShootDelay);
                     StartCoroutine(m_ShootTimer);
                 }
@@ -69,20 +71,26 @@ namespace Andrich
 
         private void Shoot()
         {
-            RaycastHit2D hit = Physics2D.Raycast(m_FirePoint.position, m_AimDirection, m_ShootRange);
-            Debug.DrawRay(m_FirePoint.position, m_AimDirection * m_ShootRange, Color.red, m_ShootDelay);
+           
+            Debug.DrawRay(m_FirePoint.position, m_AimDirection.normalized * m_ShootRange, Color.red, m_ShootDelay);
 
             m_PlayerController.DisableMovement(m_RecoilStunTime); // Recoil
             m_Rigidbody.AddForce(-m_AimDirection * m_RecoilForce);
 
-            if (hit)
+            RaycastHit hit;
+            if (Physics.Raycast(m_FirePoint.position, m_AimDirection, out hit, m_ShootRange))
             {
+                Debug.Log("kaas");
                 PlayerControllerPrototype player = hit.collider.GetComponent<PlayerControllerPrototype>(); // Later IHitAble
 
-                if (player)
+                if (hit.collider.CompareTag("Player"))
                 {
+                    print("hoi");
+                    hit.collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(10); // Later IHitAble
+                    print(hit.collider.gameObject + "HitObject");
                     if (hit.rigidbody)
                     {
+                        
                         player.DisableMovement(m_KnockbackStunTime);
                         hit.rigidbody.AddForce(-hit.normal * m_KnockbackForce); // Knockback
                     }
@@ -110,7 +118,6 @@ namespace Andrich
 
         private void Update()
         {
-           
                 MyUpdate();
         }
 
