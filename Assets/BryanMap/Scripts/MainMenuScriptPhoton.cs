@@ -20,7 +20,7 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
 
     private bool IsConecting = false;
     private const string GameVersion = "0.0.0.1";
-    private const int MaxPlayersPerRoom = 3;
+    private const int MaxPlayersPerRoom = 2;
 
 
     private void Awake()
