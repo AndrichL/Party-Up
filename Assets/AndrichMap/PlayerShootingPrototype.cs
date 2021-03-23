@@ -75,7 +75,7 @@ namespace Andrich
 
         private void Shoot()
         {
-           
+            AudioManager.instance.Play("Hit");
             Debug.DrawRay(m_FirePoint.position, m_AimDirection.normalized * m_ShootRange, Color.red, m_ShootDelay);
 
             m_PlayerController.DisableMovement(m_RecoilStunTime); // Recoil
