@@ -9,6 +9,12 @@ namespace Andrich
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerControllerPrototype : MonoBehaviourPun
     {
+        [Header("Debug")]
+        public bool IsOnline;
+        [SerializeField] int totalHealth = 100;
+        [SerializeField] public int currentHealth;
+
+
 
         [Header("Components")]
         [SerializeField] private Rigidbody m_Rigidbody;
@@ -26,12 +32,14 @@ namespace Andrich
         [SerializeField] private LayerMask m_GroundLayer;
         [SerializeField] private Vector3 m_BottomOffset;
         [SerializeField] private Vector3 m_BottomCollisionSize;
+        
         private bool m_OnGround;
 
         [SerializeField] private ParticleSystem VfxObject;
 
         private void Start()
         {
+            currentHealth = totalHealth;
             m_Rigidbody = GetComponent<Rigidbody>();
         }
 
@@ -99,25 +107,36 @@ namespace Andrich
         }
 
 
+
+     
+
+
         private void Update()
         {
-           if(photonView.IsMine)
+
+            if (photonView.IsMine && IsOnline == true)
             {
                 MyUpdate();
             }
+
+
+          
+            
                 
          
         }
 
         private void FixedUpdate()
         {
-            if (photonView.IsMine)
+            if (photonView.IsMine && IsOnline == true)
             {
                 MyFixedUpdate();
             }
 
+           
+           
 
-            
+
         }
     }
 }
