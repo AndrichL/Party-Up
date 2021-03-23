@@ -11,6 +11,8 @@ public class CoolCamera : MonoBehaviour
     private Vector3 velocity;
     public float dampTime;
 
+    public Vector3 centerPoint;
+
     public float minZoom = 50;
     public float maxZoom = 10;
 
@@ -34,7 +36,7 @@ public class CoolCamera : MonoBehaviour
 
     private void Move() 
     {
-        Vector3 centerPoint = GetCenterPoint();
+        centerPoint = GetCenterPoint();
         Vector3 newPosition = centerPoint + offset;
         transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, dampTime);
     }

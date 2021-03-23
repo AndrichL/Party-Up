@@ -20,7 +20,7 @@ namespace Photon_Menu
 
         [SerializeField] private Button Next_Button = null;
 
-      
+        
 
 
 
@@ -59,7 +59,7 @@ namespace Photon_Menu
         {
             string PlayerName = NameInput.text;
             PhotonNetwork.NickName = PlayerName;
-            PlayerPrefs.SetString(PlayerPrefsNameKey, PlayerName);
+            PlayerPrefs.SetString("PlayerPrefsNameKey", PlayerName);
         }
 
         public void Update()
