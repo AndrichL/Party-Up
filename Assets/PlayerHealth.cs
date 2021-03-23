@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon_Menu;
+using Photon.Pun;
+using Photon.Realtime;
+using System.IO;
 
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviourPun
 {
     [SerializeField] int totalHealth = 100;
     [SerializeField] int currentHealth;
@@ -18,8 +22,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        vfxPrefab.Play();
+        if(photonView.IsMine)
+        {
+            currentHealth -= damage;
+            vfxPrefab.Play();
+        }
+       
     }
 
     private void Update()
@@ -35,5 +43,9 @@ public class PlayerHealth : MonoBehaviour
         this.gameObject.SetActive(false);
         vfxPrefab2.Play();
     }
+
+
+
+
 
 }

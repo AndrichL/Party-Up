@@ -8,18 +8,16 @@ using TMPro;
 using System.IO;
 using UnityEngine.UI;
 
-public class SetplayerTransform : MonoBehaviourPun
+public class SetplayerTransform : MonoBehaviour
 {
    
 
     // Start is called before the first frame update
     void Start()
     {
-        if (photonView.IsMine)
-        {
-            Debug.Log("Getting true");
+        
             setSpawnpoint();
-        }
+       
     }
 
     public void setSpawnpoint()

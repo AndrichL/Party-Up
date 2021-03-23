@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/SennaMap/Particles/FX_BloodSplatter.prefab.meta
+guid: d63d2e04c81caff499217a67c8a3359e
+=======
 guid: 5e298bb1132d1c243b8e7eb211f4161c
+>>>>>>> 01bd44c4b56d81c2451cd084ab381983f1df363f:Assets/SennaMap/Particles/FX GunShot.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

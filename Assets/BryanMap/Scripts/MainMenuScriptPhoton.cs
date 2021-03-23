@@ -19,7 +19,7 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
 
 
     private bool IsConecting = false;
-    private const string GameVersion = "0.0.0.1";
+    private const string GameVersion = "0.0.1.0";
     private const int MaxPlayersPerRoom = 2;
 
 
@@ -97,13 +97,13 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
 
         if (PlayerCount != MaxPlayersPerRoom)
         {
-            WaitIngStatusText.text = "Waiting For Opponents To join. ";
+            WaitIngStatusText.text = "Waiting For Opponents To join. " + PhotonNetwork.CurrentRoom.PlayerCount;
             Debug.Log("Client Is waiting For Opponents Clients to connect");
         }
         else
         {
 
-            WaitIngStatusText.text = "Opponent Found Waiting for game to Start";
+            WaitIngStatusText.text = "Opponent Found Waiting for game to Start" + PhotonNetwork.CurrentRoom.PlayerCount;
             Debug.Log("Match is Ready to Begin");
         }
 
