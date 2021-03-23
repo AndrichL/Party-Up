@@ -60,7 +60,7 @@ namespace Andrich
             {
                 VfxObject.Play();
                 print("Onground");
-                if(m_JumpInput)
+                if(Input.GetKeyDown(KeyCode.Space))
                 {
                     Jump();
                 }
@@ -116,15 +116,23 @@ namespace Andrich
 
             if (photonView.IsMine && IsOnline == true)
             {
+
+
                 MyUpdate();
-            }
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Jump();
+                }
 
 
-          
-            
-                
-         
         }
+
+
+
+
+
+
+    }
 
         private void FixedUpdate()
         {
@@ -133,8 +141,8 @@ namespace Andrich
                 MyFixedUpdate();
             }
 
-           
-           
+
+
 
 
         }
