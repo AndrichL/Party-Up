@@ -118,7 +118,7 @@ public class MainMenuScriptPhoton : MonoBehaviourPunCallbacks
             Debug.LogWarning("CurrentRoom is Full Closing Room to other players untill match is over or player Leaves");
 
 
-            PhotonNetwork.LoadLevel("MainGameTesting");
+            PhotonNetwork.LoadLevel("HiddeScene");
         }
     }
 

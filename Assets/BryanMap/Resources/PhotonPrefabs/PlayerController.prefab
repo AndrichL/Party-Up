@@ -479,6 +479,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc771479463a7af4db3e22c0a56e5162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsOnline: 1
+  totalHealth: 100
+  currentHealth: 0
   m_Rigidbody: {fileID: 1133671963066682581}
   m_MovementSpeed: 20
   m_JumpForce: 10000
@@ -487,6 +490,7 @@ MonoBehaviour:
     m_Bits: 64
   m_BottomOffset: {x: 0, y: 0, z: 0}
   m_BottomCollisionSize: {x: 0, y: 0, z: 0}
+  VfxObject: {fileID: 0}
 --- !u!114 &7743968610611743434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,6 +511,7 @@ MonoBehaviour:
   m_FirePoint: {fileID: 8161757376865775510}
   m_FirePointOffset: 2
   m_KnockbackForce: 100
+  VfxObject: {fileID: 815719819882175070, guid: 19b63e519cf225345bb7920fc7b6f131, type: 3}
 --- !u!114 &1374138060976438398
 MonoBehaviour:
   m_ObjectHideFlags: 0
