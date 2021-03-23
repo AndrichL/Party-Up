@@ -22,6 +22,12 @@ public class CoolCamera : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
+
+        foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            followTargets.Add(player.gameObject.transform);
+        }
+
     }
 
     private void LateUpdate()
