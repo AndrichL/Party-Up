@@ -12,6 +12,7 @@ public class Sound
     [Range(0f, 10f)]
     public float pitch;
 
+    public bool playOnAwake;
     public bool loop;
 
     [HideInInspector ]

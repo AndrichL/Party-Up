@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
+            sound.source.playOnAwake = sound.playOnAwake;
        
         } 
     }
@@ -53,7 +55,10 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
+        {
+            Play("PVP");
+        }
     }
 }
 
