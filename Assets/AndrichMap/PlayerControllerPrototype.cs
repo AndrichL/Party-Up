@@ -117,6 +117,14 @@ namespace Andrich
             if (photonView.IsMine && IsOnline == true)
             {
 
+                if(currentHealth >= 100)
+                {
+                    currentHealth = totalHealth;
+                    Debug.LogWarning("ad max health");
+                }
+
+
+
 
                 MyUpdate();
                 if (Input.GetKeyDown(KeyCode.Space))
@@ -125,7 +133,15 @@ namespace Andrich
                 }
 
 
-        }
+            }
+            else
+            {
+                if (currentHealth >= 100)
+                {
+                    currentHealth = totalHealth;
+                    Debug.LogWarning("ad max health");
+                }
+            }
 
 
 

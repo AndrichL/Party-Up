@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8161757376865775510}
   m_Layer: 0
   m_Name: FirePoint
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 546023898553844881}
   m_Layer: 0
   m_Name: NameCanvas
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,10 +275,9 @@ GameObject:
   - component: {fileID: 8101096053051665023}
   - component: {fileID: 3465804878161718865}
   - component: {fileID: 1810714276523251459}
-  - component: {fileID: 80496827478874788}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,20 +345,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &80496827478874788
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7295841655737915478}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7412982778107201993
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,9 +361,11 @@ GameObject:
   - component: {fileID: 8133461863798077638}
   - component: {fileID: 7743968610611743434}
   - component: {fileID: 1374138060976438398}
+  - component: {fileID: 1639718526}
+  - component: {fileID: 1639718525}
   m_Layer: 0
   m_Name: PlayerController
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc771479463a7af4db3e22c0a56e5162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOnline: 1
+  IsOnline: 0
   totalHealth: 100
   currentHealth: 0
   m_Rigidbody: {fileID: 1133671963066682581}
@@ -525,3 +512,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameTag: {fileID: 6533195865364613069}
+--- !u!136 &1639718526
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7412982778107201993}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.1876829
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.34629476, z: 0}
+--- !u!114 &1639718525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7412982778107201993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d511479f61130514f93111abef35b5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalHealth: 100
+  currentHealth: 0
+  vfxPrefab: {fileID: 0}
+  vfxPrefab2: {fileID: 0}
