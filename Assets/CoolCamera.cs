@@ -19,6 +19,24 @@ public class CoolCamera : MonoBehaviour
     public float zoomLimiter;
     private Camera cam;
 
+    public bool canSpawn = true;
+    public GameObject player;
+    private float Timer = 0.5f;
+    
+
+    private void Update()
+    {    
+        Timer -= Time.deltaTime;
+        if (Timer <= 0 && canSpawn)
+        {
+            foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                followTargets.Add(player.gameObject.transform);
+            }
+            canSpawn = false;
+        }
+    }
+
     private void Start()
     {
         cam = GetComponent<Camera>();
