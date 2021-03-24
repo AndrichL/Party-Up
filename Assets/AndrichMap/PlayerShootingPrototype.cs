@@ -90,7 +90,7 @@ namespace Andrich
                 if (hit.collider.CompareTag("Player"))
                 {
                     print("hoi");
-                    hit.collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(10); // Later IHitAble
+                    hit.collider.gameObject.GetComponent<PlayerControllerPrototype>().TakeDamage(10); // Later IHitAble
                     print(hit.collider.gameObject + "HitObject");
                     if (hit.rigidbody)
                     {

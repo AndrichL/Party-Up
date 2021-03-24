@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTimer: 10
-  Isonline: 0
+  Isonline: 1
   ThisObject: {fileID: 6553573164411633522}
 --- !u!114 &2283050352999826131
 MonoBehaviour:
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AddHealt: 15
-  Isonline: 0
+  Isonline: 1
   ThisObject: {fileID: 6553573164411633522}
 --- !u!114 &1827401775847849445
 MonoBehaviour:
