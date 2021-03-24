@@ -1831,6 +1831,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &381754603 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6767184469777165204, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+  m_PrefabInstance: {fileID: 6767184469775126879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &422171999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3085,6 +3090,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &699963054 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6767184470151356965, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+  m_PrefabInstance: {fileID: 6767184469775126879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &729931584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,6 +3414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &839658071 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6767184470031569558, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+  m_PrefabInstance: {fileID: 6767184469775126879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &899188145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3886,6 +3901,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &1024420871 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6767184469529782585, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+  m_PrefabInstance: {fileID: 6767184469775126879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1032085494
 GameObject:
   m_ObjectHideFlags: 0
@@ -6072,6 +6092,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &1498551317 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6767184469906711027, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+  m_PrefabInstance: {fileID: 6767184469775126879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1500800836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7001,6 +7026,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &1674112844 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6767184469384356386, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+  m_PrefabInstance: {fileID: 6767184469775126879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687254551
 GameObject:
   m_ObjectHideFlags: 0
@@ -7317,6 +7347,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &1763412499 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6767184470500763535, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+  m_PrefabInstance: {fileID: 6767184469775126879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1777005184 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6767184468783793977, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
@@ -7334,6 +7369,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &1777005188 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 6767184468783793973, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+  m_PrefabInstance: {fileID: 6767184469775126879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1801152718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75000,6 +75040,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6767184468783793973, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184468783793973, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_UseColorTemperature
       value: 1
       objectReference: {fileID: 0}
@@ -75007,6 +75051,10 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184468783793974, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 1777005188}
     - target: {fileID: 6767184469384356386, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
       value: 268.24976
@@ -75020,6 +75068,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469384356386, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184469384356386, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_UseColorTemperature
       value: 1
       objectReference: {fileID: 0}
@@ -75027,6 +75079,14 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184469384356387, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 1674112844}
+    - target: {fileID: 6767184469529782585, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Range
+      value: 19.30211
+      objectReference: {fileID: 0}
     - target: {fileID: 6767184469529782585, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
       value: 268.24976
@@ -75040,6 +75100,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469529782585, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184469529782585, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_UseColorTemperature
       value: 1
       objectReference: {fileID: 0}
@@ -75047,6 +75111,10 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184469529782586, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 1024420871}
     - target: {fileID: 6767184469777165204, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
       value: 268.24976
@@ -75060,12 +75128,28 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469777165204, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184469777165204, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_UseColorTemperature
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469777165204, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_LightShadowCasterMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184469777165205, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 381754603}
+    - target: {fileID: 6767184469906711026, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 1498551317}
+    - target: {fileID: 6767184469906711027, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Range
+      value: 14.454873
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469906711027, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
@@ -75078,6 +75162,10 @@ PrefabInstance:
     - target: {fileID: 6767184469906711027, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184469906711027, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6767184469906711027, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_UseColorTemperature
@@ -75100,6 +75188,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6767184470013873275, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184470013873275, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_UseColorTemperature
       value: 1
       objectReference: {fileID: 0}
@@ -75107,6 +75199,14 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184470013873276, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 1763412499}
+    - target: {fileID: 6767184470031569557, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 839658071}
     - target: {fileID: 6767184470031569558, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
       value: 268.24976
@@ -75118,6 +75218,10 @@ PrefabInstance:
     - target: {fileID: 6767184470031569558, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_AreaSize.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184470031569558, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6767184470031569558, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_UseColorTemperature
@@ -75140,6 +75244,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6767184470151356965, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184470151356965, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_UseColorTemperature
       value: 1
       objectReference: {fileID: 0}
@@ -75147,6 +75255,10 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184470151356966, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 699963054}
     - target: {fileID: 6767184470500763535, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_Intensity
       value: 268.24976
@@ -75160,6 +75272,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6767184470500763535, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767184470500763535, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
       propertyPath: m_UseColorTemperature
       value: 1
       objectReference: {fileID: 0}
@@ -75167,6 +75283,10 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767184470500763536, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 1763412499}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609f0af230f83b9489aceb7e3f3eb16f, type: 3}
 --- !u!4 &6767184469775126880 stripped
