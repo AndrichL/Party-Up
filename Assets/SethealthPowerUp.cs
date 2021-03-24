@@ -8,20 +8,48 @@ using Photon_Menu;
 
 public class SethealthPowerUp : MonoBehaviourPun
 {
-    PlayerControllerPrototype PlayerCC;
+    [Header("PowerupSettings")]
+    public int AddHealt;
+    [Header("NetwerkSettings")]
+    public bool Isonline;
+    [Header("Gameobjects")]
+    public GameObject ThisObject;
 
 
- 
 
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            PlayerCC = GetComponent<PlayerControllerPrototype>();
-            PlayerCC.currentHealth -= 50;
+            Pickup(other);
+            Debug.Log("PlayerIncollider");
         }
        
+
+    }
+
+
+    public void Pickup(Collider other)
+    {
+        Debug.Log("GettingIT");
+        PlayerControllerPrototype healtStats = other.GetComponent<PlayerControllerPrototype>();
+        if(healtStats == null)
+        {
+            Debug.LogWarning("No Script found");
+            return;
+        }
+        healtStats.currentHealth += AddHealt;
+
+        if (Isonline == true)
+        {
+            PhotonNetwork.Destroy(ThisObject);
+        }
+        else
+        {
+            Destroy(ThisObject);
+        }
+
 
     }
 
