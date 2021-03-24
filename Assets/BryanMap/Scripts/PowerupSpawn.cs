@@ -36,7 +36,7 @@ public class PowerupSpawn : MonoBehaviour
             yield return new WaitForSeconds(SpawnTimer);
             if(Isonline == true)
             {
-                PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PowerUP"), Vector3.zero, Quaternion.identity);
+                PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "PowerUP"), Vector3.zero, Quaternion.identity);
             }
             else
             {

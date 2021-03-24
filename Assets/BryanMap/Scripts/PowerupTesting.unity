@@ -511,7 +511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4005282601308013234, guid: 5090caf69fde9bf4190e41e58ecf21e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.1589756
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 4005282601308013234, guid: 5090caf69fde9bf4190e41e58ecf21e3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -553,7 +553,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerController
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1639718525, guid: 5090caf69fde9bf4190e41e58ecf21e3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5090caf69fde9bf4190e41e58ecf21e3, type: 3}
 --- !u!1 &993873069
 GameObject:
@@ -634,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Powerup: {fileID: 6553573164411633522, guid: 0ea492ba456aff349ab98bf53708cdfc, type: 3}
-  SpawnTimer: 11
+  SpawnTimer: 3
   Isonline: 0
 --- !u!65 &1280432140
 BoxCollider:

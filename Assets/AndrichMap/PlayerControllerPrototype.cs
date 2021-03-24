@@ -14,6 +14,9 @@ namespace Andrich
         [SerializeField] int totalHealth = 100;
         [SerializeField] public int currentHealth;
 
+        [SerializeField] ParticleSystem vfxPrefab;
+        [SerializeField] ParticleSystem vfxPrefab2;
+
 
 
         [Header("Components")]
@@ -106,9 +109,23 @@ namespace Andrich
             Gizmos.DrawWireCube(m_Rigidbody.position + m_BottomOffset, m_BottomCollisionSize);
         }
 
+        public void TakeDamage(int damage)
+        {
+            if (photonView.IsMine)
+            {
+                currentHealth -= damage;
+                vfxPrefab.Play();
+            }
+
+        }
+
+        public void OnDeath()
+        { //elke functie die gebeurd na de player dood gaat; 
+            this.gameObject.SetActive(false);
+            vfxPrefab2.Play();
+        }
 
 
-     
 
 
         private void Update()
@@ -116,6 +133,19 @@ namespace Andrich
 
             if (photonView.IsMine && IsOnline == true)
             {
+
+                if(currentHealth >= 100)
+                {
+                    currentHealth = totalHealth;
+                    Debug.LogWarning("ad max health");
+                }
+
+                if (currentHealth <= 0)
+                {
+                    OnDeath();
+                }
+
+
 
 
                 MyUpdate();
@@ -125,7 +155,15 @@ namespace Andrich
                 }
 
 
-        }
+            }
+            else
+            {
+                if (currentHealth >= 100)
+                {
+                    currentHealth = totalHealth;
+                    Debug.LogWarning("ad max health");
+                }
+            }
 
 
 
