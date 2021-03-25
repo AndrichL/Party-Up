@@ -9,6 +9,8 @@ public class MapShortens : MonoBehaviour
     [SerializeField] private float shakeTimer = 2f;
     public CameraShake cameraShake;
 
+    private bool canShake = true;
+
     private void Update()
     {
         timer -= Time.deltaTime;
@@ -18,12 +20,14 @@ public class MapShortens : MonoBehaviour
             {
                 deleteable.SetActive(false);
             }
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
+            StopCoroutine(cameraShake.Shake(0,0));
         }
 
-        if (timer <= 2f)
+        if (timer <= 2f && canShake)
         {
             StartCoroutine(cameraShake.Shake(shakeTimer, .1f));
+            canShake = false;
         }
     }
 }

@@ -17,8 +17,6 @@ namespace Andrich
         [SerializeField] ParticleSystem vfxPrefab;
         [SerializeField] ParticleSystem vfxPrefab2;
 
-
-
         [Header("Components")]
         [SerializeField] private Rigidbody m_Rigidbody;
 
@@ -39,6 +37,7 @@ namespace Andrich
         private bool m_OnGround;
 
         [SerializeField] private ParticleSystem VfxObject;
+        [SerializeField] private GameObject UIprefab;
 
         private void Start()
         {
@@ -122,7 +121,16 @@ namespace Andrich
         public void OnDeath()
         { //elke functie die gebeurd na de player dood gaat; 
             this.gameObject.SetActive(false);
-            vfxPrefab2.Play();
+
+            foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                player.SetActive(false);
+            }
+
+            foreach (GameObject ui in GameObject.FindGameObjectsWithTag("UI"))
+            {
+                ui.SetActive(true);
+            }
         }
 
 
