@@ -16,7 +16,7 @@ namespace Andrich
         [Header("Shooting")]
         [SerializeField] private float m_ShootDelay = 0.25f;
         [SerializeField] private float m_ShootRange = 10f;
-        [SerializeField] private float m_RecoilForce = 100;
+        [SerializeField] private float m_RecoilForce = 10000f;
         private Vector3 m_MousePosition;
         private Vector3 m_AimDirection;
         private bool m_AllowNextShot = true;
@@ -85,7 +85,16 @@ namespace Andrich
             if (Physics.Raycast(m_FirePoint.position, m_AimDirection, out hit, m_ShootRange))
             {
                 Debug.Log("kaas");
-                PlayerControllerPrototype player = hit.collider.GetComponent<PlayerControllerPrototype>(); // Later IHitAble
+
+                PlayerControllerPrototype player = hit.transform.GetComponent<PlayerControllerPrototype>();
+                if(player != null)
+                {
+                    player.TakeDamage(20);
+                }
+
+
+
+               // PlayerControllerPrototype player = hit.collider.GetComponent // Later IHitAble
 
                 if (hit.collider.CompareTag("Player"))
                 {

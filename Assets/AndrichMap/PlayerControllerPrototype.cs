@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
+
 
 namespace Andrich
 { 
@@ -42,6 +44,11 @@ namespace Andrich
 
         private void Start()
         {
+            if (currentHealth >= 100)
+            {
+                currentHealth = totalHealth;
+                Debug.LogWarning("ad max health");
+            }
             currentHealth = totalHealth;
             m_Rigidbody = GetComponent<Rigidbody>();
         }
@@ -109,11 +116,17 @@ namespace Andrich
 
         public void TakeDamage(int damage)
         {
-            if (photonView.IsMine)
-            {
+           
                 currentHealth -= damage;
+                if(currentHealth <= 0)
+                {
+                PhotonNetwork.LeaveRoom();
+                SceneManager.LoadScene(4);
+                }
+
+
                 vfxPrefab.Play();
-            }
+          
 
         }
 
@@ -124,21 +137,29 @@ namespace Andrich
                 var pl = player.GetComponent<PlayerControllerPrototype>();
                 pl.uiGfx.SetActive(true);
                 pl.playerGfx.SetActive(false);
+                PhotonNetwork.LeaveRoom();
+                SceneManager.LoadScene(4);
             }          
         }
 
 
         private void Update()
         {
+            
+           if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+            {
+                PhotonNetwork.DestroyAll();
+                PhotonNetwork.LeaveRoom();
+                SceneManager.LoadScene(3);
+            }
+
+
+
 
             if (photonView.IsMine && IsOnline == true)
             {
 
-                if(currentHealth >= 100)
-                {
-                    currentHealth = totalHealth;
-                    Debug.LogWarning("ad max health");
-                }
+               
 
                 if (currentHealth <= 0)
                 {
@@ -156,15 +177,7 @@ namespace Andrich
 
 
             }
-            else
-            {
-                if (currentHealth >= 100)
-                {
-                    currentHealth = totalHealth;
-                    Debug.LogWarning("ad max health");
-                }
-            }
-
+           
 
 
 

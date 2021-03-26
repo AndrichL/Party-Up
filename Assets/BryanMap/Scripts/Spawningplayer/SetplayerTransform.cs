@@ -24,6 +24,6 @@ public class SetplayerTransform : MonoBehaviour
     {
         Transform spawnpoint = SpawnManger.Instance.GetSpawnPoints();
         transform.position = spawnpoint.position;
-        transform.rotation = spawnpoint.rotation;
+       
     }
 }
