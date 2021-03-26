@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+    private bool isPlaying = false;
 
     public Sound[] sounds;
 
@@ -66,10 +67,11 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2) && isPlaying == false)
         {
             Stop("Theme");
             Play("PVP");
+            isPlaying = true;
         }
     }
 }

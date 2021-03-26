@@ -7,15 +7,9 @@ namespace Andrich
 {
     public class Kill_Object : MonoBehaviour
     {
-        private PlayerControllerPrototype player;
-        private void Start()
-        {
-          player = GetComponent<PlayerControllerPrototype>();
-        }
-
         private void OnTriggerEnter(Collider other)
         {
-            player.TakeDamage(200);
+            other.gameObject.GetComponent<PlayerControllerPrototype>().TakeDamage(200);
         }
     }
 }

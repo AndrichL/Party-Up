@@ -37,7 +37,8 @@ namespace Andrich
         private bool m_OnGround;
 
         [SerializeField] private ParticleSystem VfxObject;
-        [SerializeField] private GameObject UIprefab;
+        [SerializeField] private GameObject playerGfx;
+        [SerializeField] private GameObject uiGfx;
 
         private void Start()
         {
@@ -61,7 +62,6 @@ namespace Andrich
             if (m_OnGround)
             {
                 VfxObject.Play();
-                print("Onground");
                 if(Input.GetKeyDown(KeyCode.Space))
                 {
                     Jump();
@@ -78,7 +78,6 @@ namespace Andrich
 
         private void Jump()
         {
-            Debug.Log("Jump");
             m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, 0, m_Rigidbody.velocity.z);
             m_Rigidbody.AddForce(Vector3.up * m_JumpForce, ForceMode.Impulse);
         }
@@ -119,21 +118,14 @@ namespace Andrich
         }
 
         public void OnDeath()
-        { //elke functie die gebeurd na de player dood gaat; 
-            this.gameObject.SetActive(false);
-
+        { //elke functie die gebeurd na de player dood gaat;          
             foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
             {
-                player.SetActive(false);
-            }
-
-            foreach (GameObject ui in GameObject.FindGameObjectsWithTag("UI"))
-            {
-                ui.SetActive(true);
-            }
+                var pl = player.GetComponent<PlayerControllerPrototype>();
+                pl.uiGfx.SetActive(true);
+                pl.playerGfx.SetActive(false);
+            }          
         }
-
-
 
 
         private void Update()
